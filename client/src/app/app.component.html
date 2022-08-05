@@ -1,0 +1,18 @@
+
+<app-nav></app-nav>
+
+
+<div class="container justify-content-center d-flex">
+  <h1 >{{title}}</h1>
+</div>
+<ul class="container">
+  <li class="behzad" *ngFor="let users of user">
+   ID Is : {{users.id}} --And Name Is :  {{users.name}} -- And DateofBirth Is {{users.dateofBirth}}
+    <div></div>
+    </li>
+  <li class="behzad" *ngFor="let item of weather">{{item.date}} temperatureC: {{item.temperatureC}} temperatureF : {{temperatureF}}</li>
+</ul>
+
+
+
+<router-outlet></router-outlet>
