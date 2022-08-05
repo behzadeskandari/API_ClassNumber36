@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   title = "Dating App";
   user: any;
   weather: any;
+  loggedIn: boolean = false;
   // behzad: Array<any> = [];
   // x: Array<any> = [];
   constructor(private http: HttpClient) { }

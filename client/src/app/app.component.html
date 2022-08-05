@@ -5,7 +5,7 @@
 <div class="container justify-content-center d-flex">
   <h1 >{{title}}</h1>
 </div>
-<ul class="container">
+<ul class="container" *ngIf="loggedIn">
   <li class="behzad" *ngFor="let users of user">
    ID Is : {{users.id}} --And Name Is :  {{users.name}} -- And DateofBirth Is {{users.dateofBirth}}
     <div></div>

@@ -21,21 +21,19 @@ namespace API.Controllers
             _context = context;
         }
 
-
+        //[Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<AppUser>> GetUsers()
         {
-            
             return _context.Users.ToList();
         }
 
+        //[AllowAnonymous]
         [HttpGet("{Id}")]
         public ActionResult<AppUser> getUserById(int Id)
         {
             return _context.Users.Find(Id);
-            
             //return _context.Users.First(x => x.Id == Id);
-            //return _context.Users.Any(x => x.Id == Id); //Wrong
         }
 
         [HttpPost("SaveDateOfBirth")]
